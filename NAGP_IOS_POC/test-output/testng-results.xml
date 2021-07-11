@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="5" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-11T16:48:12 IST" name="Default suite" finished-at="2021-07-11T16:48:29 IST" duration-ms="17116">
+  <suite started-at="2021-07-11T22:33:39 IST" name="Suite" finished-at="2021-07-11T22:33:51 IST" duration-ms="11748">
     <groups>
     </groups>
-    <test started-at="2021-07-11T16:48:12 IST" name="Default test" finished-at="2021-07-11T16:48:29 IST" duration-ms="17116">
-      <class name="com.poc.test.BaseTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.poc.test.BaseTest@6cf0e0ba]" started-at="2021-07-11T16:48:12 IST" name="setup" finished-at="2021-07-11T16:48:29 IST" duration-ms="17051" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="sampleTest()[pri:0, instance:com.poc.test.BaseTest@6cf0e0ba]" started-at="2021-07-11T16:48:29 IST" name="sampleTest" finished-at="2021-07-11T16:48:29 IST" duration-ms="11" status="PASS">
+    <test started-at="2021-07-11T22:33:39 IST" name="UiCatalog App" finished-at="2021-07-11T22:33:51 IST" duration-ms="11748">
+      <class name="com.poc.test.handleAlertTests">
+        <test-method signature="sampleTest()[pri:0, instance:com.poc.test.handleAlertTests@55b699ef]" started-at="2021-07-11T22:33:51 IST" name="sampleTest" finished-at="2021-07-11T22:33:51 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sampleTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.poc.test.BaseTest@6cf0e0ba]" started-at="2021-07-11T16:48:29 IST" name="teardown" finished-at="2021-07-11T16:48:30 IST" duration-ms="76" status="FAIL">
+        <test-method signature="AlertButton()[pri:0, instance:com.poc.test.handleAlertTests@55b699ef]" started-at="2021-07-11T22:33:51 IST" name="AlertButton" finished-at="2021-07-11T22:33:51 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AlertButton -->
+      </class> <!-- com.poc.test.handleAlertTests -->
+      <class name="com.poc.test.BaseTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.poc.test.BaseTest@74f0ea28]" started-at="2021-07-11T22:33:39 IST" name="setup" finished-at="2021-07-11T22:33:51 IST" duration-ms="11705" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="sampleTest()[pri:0, instance:com.poc.test.BaseTest@74f0ea28]" started-at="2021-07-11T22:33:51 IST" name="sampleTest" finished-at="2021-07-11T22:33:51 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.poc.test.BaseTest@74f0ea28]" started-at="2021-07-11T22:33:51 IST" name="teardown" finished-at="2021-07-11T22:33:52 IST" duration-ms="35" status="FAIL">
           <exception class="org.openqa.selenium.UnsupportedCommandException">
             <message>
               <![CDATA[Method is not implemented
@@ -23,7 +33,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17
 System info: host: 'sanyamwadhwa-1.local', ip: 'fe80:0:0:0:1057:7065:3338:ff1f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '16.0.1'
 Driver info: io.appium.java_client.ios.IOSDriver
 Capabilities {app: /Users/sanyamwadhwa/Library..., browserName: , databaseEnabled: false, deviceName: iPhone 12 Pro Max, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: IOS, platformVersion: 14.5, takesScreenshot: true, udid: 5CA12C8C-9FE8-444C-8E95-C19..., webStorageEnabled: false}
-Session ID: ed2d7900-9adb-41a9-8e52-cdd83488a72d]]>
+Session ID: 7d40fd1f-1967-4524-afcd-59ee11f0eee0]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.UnsupportedCommandException: Method is not implemented
@@ -31,7 +41,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17
 System info: host: 'sanyamwadhwa-1.local', ip: 'fe80:0:0:0:1057:7065:3338:ff1f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '16.0.1'
 Driver info: io.appium.java_client.ios.IOSDriver
 Capabilities {app: /Users/sanyamwadhwa/Library..., browserName: , databaseEnabled: false, deviceName: iPhone 12 Pro Max, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: IOS, platformVersion: 14.5, takesScreenshot: true, udid: 5CA12C8C-9FE8-444C-8E95-C19..., webStorageEnabled: false}
-Session ID: ed2d7900-9adb-41a9-8e52-cdd83488a72d
+Session ID: 7d40fd1f-1967-4524-afcd-59ee11f0eee0
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -47,7 +57,7 @@ at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobile
 at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
 at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-at com.poc.test.BaseTest.teardown(BaseTest.java:75)
+at com.poc.test.BaseTest.teardown(BaseTest.java:89)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -74,6 +84,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.poc.test.BaseTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- UiCatalog App -->
+  </suite> <!-- Suite -->
 </testng-results>
