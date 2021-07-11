@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="5" passed="3" failed="0" skipped="0">
+<testng-results ignored="4" total="7" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-11T22:33:39 IST" name="Suite" finished-at="2021-07-11T22:33:51 IST" duration-ms="11748">
+  <suite started-at="2021-07-11T23:35:13 IST" name="Suite" finished-at="2021-07-11T23:35:25 IST" duration-ms="11639">
     <groups>
     </groups>
-    <test started-at="2021-07-11T22:33:39 IST" name="UiCatalog App" finished-at="2021-07-11T22:33:51 IST" duration-ms="11748">
+    <test started-at="2021-07-11T23:35:13 IST" name="UiCatalog App" finished-at="2021-07-11T23:35:25 IST" duration-ms="11639">
       <class name="com.poc.test.handleAlertTests">
-        <test-method signature="sampleTest()[pri:0, instance:com.poc.test.handleAlertTests@55b699ef]" started-at="2021-07-11T22:33:51 IST" name="sampleTest" finished-at="2021-07-11T22:33:51 IST" duration-ms="1" status="PASS">
+        <test-method signature="sampleTest()[pri:0, instance:com.poc.test.handleAlertTests@313ac989]" started-at="2021-07-11T23:35:24 IST" name="sampleTest" finished-at="2021-07-11T23:35:24 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sampleTest -->
-        <test-method signature="AlertButton()[pri:0, instance:com.poc.test.handleAlertTests@55b699ef]" started-at="2021-07-11T22:33:51 IST" name="AlertButton" finished-at="2021-07-11T22:33:51 IST" duration-ms="6" status="PASS">
+        <test-method signature="AlertButton()[pri:0, instance:com.poc.test.handleAlertTests@313ac989]" started-at="2021-07-11T23:35:24 IST" name="AlertButton" finished-at="2021-07-11T23:35:24 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AlertButton -->
       </class> <!-- com.poc.test.handleAlertTests -->
       <class name="com.poc.test.BaseTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.poc.test.BaseTest@74f0ea28]" started-at="2021-07-11T22:33:39 IST" name="setup" finished-at="2021-07-11T22:33:51 IST" duration-ms="11705" status="PASS">
+        <test-method is-config="true" signature="setExtent()[pri:0, instance:com.poc.test.BaseTest@2a3b5b47]" started-at="2021-07-11T23:35:13 IST" name="setExtent" finished-at="2021-07-11T23:35:13 IST" duration-ms="372" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setExtent -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.poc.test.BaseTest@2a3b5b47]" started-at="2021-07-11T23:35:13 IST" name="setup" finished-at="2021-07-11T23:35:24 IST" duration-ms="10888" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="sampleTest()[pri:0, instance:com.poc.test.BaseTest@74f0ea28]" started-at="2021-07-11T22:33:51 IST" name="sampleTest" finished-at="2021-07-11T22:33:51 IST" duration-ms="5" status="PASS">
+        <test-method signature="sampleTest()[pri:0, instance:com.poc.test.BaseTest@2a3b5b47]" started-at="2021-07-11T23:35:24 IST" name="sampleTest" finished-at="2021-07-11T23:35:24 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sampleTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.poc.test.BaseTest@74f0ea28]" started-at="2021-07-11T22:33:51 IST" name="teardown" finished-at="2021-07-11T22:33:52 IST" duration-ms="35" status="FAIL">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.poc.test.BaseTest@2a3b5b47]" started-at="2021-07-11T23:35:24 IST" name="endReport" finished-at="2021-07-11T23:35:25 IST" duration-ms="329" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.poc.test.BaseTest@2a3b5b47]" started-at="2021-07-11T23:35:25 IST" name="teardown" finished-at="2021-07-11T23:35:25 IST" duration-ms="40" status="FAIL">
           <exception class="org.openqa.selenium.UnsupportedCommandException">
             <message>
               <![CDATA[Method is not implemented
@@ -33,7 +41,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17
 System info: host: 'sanyamwadhwa-1.local', ip: 'fe80:0:0:0:1057:7065:3338:ff1f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '16.0.1'
 Driver info: io.appium.java_client.ios.IOSDriver
 Capabilities {app: /Users/sanyamwadhwa/Library..., browserName: , databaseEnabled: false, deviceName: iPhone 12 Pro Max, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: IOS, platformVersion: 14.5, takesScreenshot: true, udid: 5CA12C8C-9FE8-444C-8E95-C19..., webStorageEnabled: false}
-Session ID: 7d40fd1f-1967-4524-afcd-59ee11f0eee0]]>
+Session ID: edda84e8-6ded-4125-8db1-6d6b9d426a9d]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.UnsupportedCommandException: Method is not implemented
@@ -41,7 +49,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17
 System info: host: 'sanyamwadhwa-1.local', ip: 'fe80:0:0:0:1057:7065:3338:ff1f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '16.0.1'
 Driver info: io.appium.java_client.ios.IOSDriver
 Capabilities {app: /Users/sanyamwadhwa/Library..., browserName: , databaseEnabled: false, deviceName: iPhone 12 Pro Max, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: IOS, platformVersion: 14.5, takesScreenshot: true, udid: 5CA12C8C-9FE8-444C-8E95-C19..., webStorageEnabled: false}
-Session ID: 7d40fd1f-1967-4524-afcd-59ee11f0eee0
+Session ID: edda84e8-6ded-4125-8db1-6d6b9d426a9d
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -57,7 +65,7 @@ at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobile
 at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
 at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-at com.poc.test.BaseTest.teardown(BaseTest.java:89)
+at com.poc.test.BaseTest.teardown(BaseTest.java:125)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

@@ -1,15 +1,23 @@
 package com.poc.test;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -26,69 +34,96 @@ public class BaseTest{
 
 	AppiumDriver<MobileElement> driver ;
 	public static Properties prop;
-	
+
 	public final static Logger logger = Logger.getLogger(BaseTest.class);
-	
-	
+
+
 	// Extent Report
-		public static ExtentReports extentReport = null;
-		public static ExtentTest extentTest = null;
-		
-		
-		public BaseTest() {
-			try {
-				prop = new Properties();
-				FileInputStream ip = new FileInputStream("./config.properties");
-				prop.load(ip);
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+	public static ExtentReports extentReport = null;
+	public static ExtentTest extentTest = null;
+	public ExtentReports extent;
+
+
+	public BaseTest() {
+		try {
+			prop = new Properties();
+			FileInputStream ip = new FileInputStream("./config.properties");
+			prop.load(ip);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
+	}
+
+
+	@BeforeTest
+	public void setExtent(){
+		extent = new ExtentReports(System.getProperty("user.dir")+"/test-output/ExtentReport.html", true);
+		extent.addSystemInfo("Host Name", "sanyamwadhwa-1.local");
+		extent.addSystemInfo("User Name", "sanyamwadhwa");
 		
+
+	}
 	
+	public static String getScreenshot(WebDriver driver, String screenshotName) throws IOException{
+		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		// after execution, you could see a folder "FailedTestsScreenshots"
+		// under src folder
+		String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/" + screenshotName + dateName
+				+ ".png";
+		File finalDestination = new File(destination);
+		FileUtils.copyFile(source, finalDestination);
+		return destination;
+	}
+
 	@BeforeTest
 	public void setup()  {
 		try {
 
 
-		
-		DesiredCapabilities capability = new DesiredCapabilities();
-		capability.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");
-		capability.setCapability(MobileCapabilityType.PLATFORM_VERSION, "14.5");
-		capability.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 12 Pro Max");
-//		capability.setCapability(MobileCapabilityType.BROWSER_NAME, "Safari");
-        //capability.setCapability("App", "/Users/sanyamwadhwa/Library/Developer/Xcode/DerivedData/UIKitCatalog-ewuvachlsyekljglmjzppmwquwwm/Build/Products/Debug-iphonesimulator");
-		capability.setCapability(MobileCapabilityType.APP, "/Users/sanyamwadhwa/Library/Developer/Xcode/DerivedData/UIKitCatalog-ewuvachlsyekljglmjzppmwquwwm/Build/Products/Debug-iphonesimulator/UIKitCatalog.app");
-		//capability.setCapability(MobileCapabilityType.APP, "../APP File/UIKitCatalog.app");
-		URL url = new URL("http://127.0.0.1:4723/wd/hub");
-		
-		
-		driver = new IOSDriver<MobileElement>(url, capability);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
-	
-	} catch(Exception exp){
-		System.out.println("Cause is : "+exp.getCause());
-		System.out.println("Message is : "+ exp.getMessage());
-		exp.printStackTrace();		
+
+			DesiredCapabilities capability = new DesiredCapabilities();
+			capability.setCapability(MobileCapabilityType.PLATFORM_NAME, prop.getProperty("PLATFORM_NAME"));
+			capability.setCapability(MobileCapabilityType.PLATFORM_VERSION, prop.getProperty("PLATFORM_VERSION"));
+			capability.setCapability(MobileCapabilityType.DEVICE_NAME, prop.getProperty("DEVICE_NAME"));
+			capability.setCapability(MobileCapabilityType.APP, prop.getProperty("APP"));
+			
+			URL url = new URL("http://127.0.0.1:4723/wd/hub");
+
+
+			driver = new IOSDriver<MobileElement>(url, capability);
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+
+		} catch(Exception exp){
+			System.out.println("Cause is : "+exp.getCause());
+			System.out.println("Message is : "+ exp.getMessage());
+			exp.printStackTrace();		
+		}
 	}
-	}
-	
+
 	@Test
 	public void sampleTest() {
-		
+
 		System.out.println("I am in sample test");
-		
+
 	}
-	
-	
+
+
+	@AfterTest
+	public void endReport(){
+		extent.flush();
+		extent.close();
+	}
+
 	@AfterSuite
 	public void teardown() {
 		driver.close();
 		driver.quit();
-		
+
 	}
-	
+
 }
