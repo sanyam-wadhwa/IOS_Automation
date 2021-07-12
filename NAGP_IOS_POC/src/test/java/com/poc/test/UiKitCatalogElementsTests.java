@@ -3,6 +3,8 @@ package com.poc.test;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import POC_Pages.UiKitcatalogElements;
@@ -18,12 +20,22 @@ public class UiKitCatalogElementsTests extends BaseTest {
 	Logger logger ;
 	
 	@Test
-	public void clickingOnButtons() {
-		UiKitcatalogElements elements = new UiKitcatalogElements(driver);
+	public void Steppers() {
 		logger.info(prop.getProperty("ButtonandImageViewer"));
-		elements.clickonButtons();
-		elements.clickOnImageviewer();
+		driver.findElement(By.xpath(prop.getProperty("Steppers")));
+		
 		
 	}
+	
+	
+	@Test
+	public void PageControl() {
+		logger.info(prop.getProperty("PageConroller"));
+		MobileElement element = driver.findElement(By.xpath(prop.getProperty("PageControl")));
+		Assert.assertEquals(prop.getProperty("Expectedresults"), element);
+		
+		
+	}
+	
 
 }

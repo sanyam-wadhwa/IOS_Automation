@@ -40,8 +40,8 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class BaseTest{
 
 	public static AppiumDriver<MobileElement> driver ;
-	public static Properties prop;
-
+    public static Properties prop = new Properties();
+	public static File file = new File("./Resources/configuration.properties");
 	public final static Logger logger = Logger.getLogger(BaseTest.class);
 
 
@@ -51,7 +51,7 @@ public class BaseTest{
 //		//		wait = new WebDriverWait(driver, 15);
 //	}
 	
-	public BaseTest(AppiumDriver<MobileElement> driver) {
+	public BaseTest(IOSDriver<MobileElement> driver) {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
