@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -17,14 +16,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.ClickAction;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -40,24 +35,15 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class BaseTest{
 
 	public static AppiumDriver<MobileElement> driver ;
-    public static Properties prop = new Properties();
+	public static Properties prop = new Properties();
 	public static File file = new File("./Resources/configuration.properties");
 	public final static Logger logger = Logger.getLogger(BaseTest.class);
 
 
-//	public BaseTest(AppiumDriver<MobileElement> driver) {
-//		this.driver = driver;
-//		PageFactory.initElements(driver, this);
-//		//		wait = new WebDriverWait(driver, 15);
-//	}
-	
 	public BaseTest(IOSDriver<MobileElement> driver) {
-        this.driver = driver;
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-	
-	
-
+		BaseTest.driver = driver;
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+	}
 
 
 	// Extent Report
@@ -135,18 +121,10 @@ public class BaseTest{
 
 		System.out.println(driver.getPageSource());
 
-		//		alertbtn.click();
-
-		//		MobileElement button = driver.findElement(By.xpath("//XCUIElementTypeButton[@name='chevron']"));
-		//		button.click();
+		MobileElement button = driver.findElement(By.xpath("//XCUIElementTypeButton[@name='chevron']"));
+		button.click();
 
 
-	}
-
-
-	private MobileElement ClickAction(boolean b) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 

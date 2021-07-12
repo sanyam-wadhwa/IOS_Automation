@@ -15,7 +15,7 @@ public class UiKitcatalogElements {
     
     public UiKitcatalogElements(AppiumDriver<MobileElement> driver) {
     	Super();
-    	this.driver = (AppiumDriver<MobileElement>) driver;
+    	UiKitcatalogElements.driver = (AppiumDriver<MobileElement>) driver;
         PageFactory.initElements((driver), this);
     }
 
