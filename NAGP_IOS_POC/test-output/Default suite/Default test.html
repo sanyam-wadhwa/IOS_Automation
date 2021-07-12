@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jul 12 07:12:02 IST 2021</td>
+<td>Started on:</td><td>Mon Jul 12 08:02:19 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>24 seconds (24497 ms)</td>
+<tr><td>Total time:</td><td>33 seconds (33398 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,19 +75,9 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.poc.test.handleAlertTests.AlertButton()'><b>AlertButton</b><br>Test class: com.poc.test.handleAlertTests</td>
-<td><div><pre>java.lang.ExceptionInInitializerError
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:52)
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:33)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:222)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.access$0(AppiumFieldDecorator.java:220)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator$1.proxyForLocator(AppiumFieldDecorator.java:105)
-	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:62)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:160)
-	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
-	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
-	at POC_Pages.handleAlertPages.&lt;init&gt;(handleAlertPages.java:30)
-	at com.poc.test.handleAlertTests.AlertButton(handleAlertTests.java:24)
+<td title='com.poc.test.handleAlertTests.AlertClick()'><b>AlertClick</b><br>Test class: com.poc.test.handleAlertTests</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;com.poc.test.handleAlertTests.prop&quot; is null
+	at com.poc.test.handleAlertTests.AlertClick(handleAlertTests.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -116,47 +106,9 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: net.sf.cglib.core.CodeGenerationException: java.lang.reflect.InaccessibleObjectException--&gt;Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @40f9161a
-	at net.sf.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:464)
-	at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:339)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:96)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:94)
-	at net.sf.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at net.sf.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
-	at net.sf.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:119)
-	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:294)
-	at net.sf.cglib.core.KeyFactory$Generator.create(KeyFactory.java:221)
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:174)
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:153)
-	at net.sf.cglib.proxy.Enhancer.&lt;clinit&gt;(Enhancer.java:73)
-	... 39 more
-Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @40f9161a
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
-	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
-	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
-	at net.sf.cglib.core.ReflectUtils$1.run(ReflectUtils.java:61)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at net.sf.cglib.core.ReflectUtils.&lt;clinit&gt;(ReflectUtils.java:52)
-	at net.sf.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:243)
-	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
-	at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:332)
-	... 51 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace749100260", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace749100260'><pre>java.lang.ExceptionInInitializerError
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:52)
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:33)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:222)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.access$0(AppiumFieldDecorator.java:220)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator$1.proxyForLocator(AppiumFieldDecorator.java:105)
-	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:62)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:160)
-	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
-	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
-	at POC_Pages.handleAlertPages.&lt;init&gt;(handleAlertPages.java:30)
-	at com.poc.test.handleAlertTests.AlertButton(handleAlertTests.java:24)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1264941544", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1264941544'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;com.poc.test.handleAlertTests.prop&quot; is null
+	at com.poc.test.handleAlertTests.AlertClick(handleAlertTests.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -185,37 +137,9 @@ Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protect
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: net.sf.cglib.core.CodeGenerationException: java.lang.reflect.InaccessibleObjectException--&gt;Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @40f9161a
-	at net.sf.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:464)
-	at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:339)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:96)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:94)
-	at net.sf.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at net.sf.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
-	at net.sf.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:119)
-	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:294)
-	at net.sf.cglib.core.KeyFactory$Generator.create(KeyFactory.java:221)
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:174)
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:153)
-	at net.sf.cglib.proxy.Enhancer.&lt;clinit&gt;(Enhancer.java:73)
-	... 39 more
-Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @40f9161a
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
-	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
-	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
-	at net.sf.cglib.core.ReflectUtils$1.run(ReflectUtils.java:61)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at net.sf.cglib.core.ReflectUtils.&lt;clinit&gt;(ReflectUtils.java:52)
-	at net.sf.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:243)
-	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
-	at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:332)
-	... 51 more
 </pre></div></td>
 <td>0</td>
-<td>com.poc.test.handleAlertTests@5c6648b0</td></tr>
+<td>com.poc.test.handleAlertTests@459e9125</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -228,7 +152,7 @@ Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protect
 <td title='com.poc.test.handleAlertTests.sampleTest()'><b>sampleTest</b><br>Test class: com.poc.test.handleAlertTests</td>
 <td></td>
 <td>3</td>
-<td>com.poc.test.handleAlertTests@5c6648b0</td></tr>
+<td>com.poc.test.handleAlertTests@459e9125</td></tr>
 </table><p>
 </body>
 </html>

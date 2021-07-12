@@ -9,16 +9,16 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">24,497</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">33,398</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.poc.test.handleAlertTests</td><td><a href="#m0">teardown</a></td><td rowspan="1">1626054147461</td><td rowspan="1">61</td></tr><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.poc.test.handleAlertTests</td><td><a href="#m1">AlertButton</a></td><td rowspan="1">1626054146585</td><td rowspan="1">350</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.poc.test.handleAlertTests</td><td><a href="#m2">sampleTest</a></td><td rowspan="1">1626054143025</td><td rowspan="1">3554</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.poc.test.handleAlertTests</td><td><a href="#m0">teardown</a></td><td rowspan="1">1626057173297</td><td rowspan="1">77</td></tr><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.poc.test.handleAlertTests</td><td><a href="#m1">AlertClick</a></td><td rowspan="1">1626057172790</td><td rowspan="1">2</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.poc.test.handleAlertTests</td><td><a href="#m2">sampleTest</a></td><td rowspan="1">1626057169683</td><td rowspan="1">3100</td></tr></tbody>
 </table>
 <h2>Default test</h2><h3 id="m0">com.poc.test.handleAlertTests#teardown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.UnsupportedCommandException: Method is not implemented
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;sanyamwadhwa-1.local&apos;, ip: &apos;fe80:0:0:0:1057:7065:3338:ff1f%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.4&apos;, java.version: &apos;16.0.1&apos;
 Driver info: io.appium.java_client.ios.IOSDriver
 Capabilities {app: /Users/sanyamwadhwa/Library..., browserName: , databaseEnabled: false, deviceName: iPhone 12 Pro Max, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: IOS, platformVersion: 14.5, takesScreenshot: true, udid: 5CA12C8C-9FE8-444C-8E95-C19..., webStorageEnabled: false}
-Session ID: 1fc4e43f-4083-43b0-92ab-d217eadc4be7
+Session ID: 6a3f2a8f-342b-4ba2-90d0-19d66e8759b6
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -34,7 +34,7 @@ Session ID: 1fc4e43f-4083-43b0-92ab-d217eadc4be7
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
 	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-	at com.poc.test.BaseTest.teardown(BaseTest.java:158)
+	at com.poc.test.BaseTest.teardown(BaseTest.java:161)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -55,18 +55,8 @@ Session ID: 1fc4e43f-4083-43b0-92ab-d217eadc4be7
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.poc.test.handleAlertTests#AlertButton</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.ExceptionInInitializerError
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:52)
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:33)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:222)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.access$0(AppiumFieldDecorator.java:220)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator$1.proxyForLocator(AppiumFieldDecorator.java:105)
-	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:62)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:160)
-	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
-	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
-	at POC_Pages.handleAlertPages.&lt;init&gt;(handleAlertPages.java:30)
-	at com.poc.test.handleAlertTests.AlertButton(handleAlertTests.java:24)
+<h3 id="m1">com.poc.test.handleAlertTests#AlertClick</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;com.poc.test.handleAlertTests.prop&quot; is null
+	at com.poc.test.handleAlertTests.AlertClick(handleAlertTests.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -95,34 +85,6 @@ Session ID: 1fc4e43f-4083-43b0-92ab-d217eadc4be7
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: net.sf.cglib.core.CodeGenerationException: java.lang.reflect.InaccessibleObjectException--&gt;Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @40f9161a
-	at net.sf.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:464)
-	at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:339)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:96)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:94)
-	at net.sf.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at net.sf.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
-	at net.sf.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:119)
-	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:294)
-	at net.sf.cglib.core.KeyFactory$Generator.create(KeyFactory.java:221)
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:174)
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:153)
-	at net.sf.cglib.proxy.Enhancer.&lt;clinit&gt;(Enhancer.java:73)
-	... 39 more
-Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @40f9161a
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
-	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
-	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
-	at net.sf.cglib.core.ReflectUtils$1.run(ReflectUtils.java:61)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at net.sf.cglib.core.ReflectUtils.&lt;clinit&gt;(ReflectUtils.java:52)
-	at net.sf.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:243)
-	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
-	at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:332)
-	... 51 more
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">com.poc.test.handleAlertTests#sampleTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>

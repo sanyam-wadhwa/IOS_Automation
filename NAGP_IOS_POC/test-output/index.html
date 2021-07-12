@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.poc.test.handleAlertTests" class="method navigator-link" hash-for-method="AlertButton">AlertButton</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.poc.test.handleAlertTests" class="method navigator-link" hash-for-method="AlertClick">AlertClick</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -141,21 +141,11 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="AlertButton">
-                  </a> <!-- AlertButton -->
-                  <span class="method-name">AlertButton</span>
-                  <div class="stack-trace">java.lang.ExceptionInInitializerError
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:52)
-	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:33)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:222)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.access$0(AppiumFieldDecorator.java:220)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator$1.proxyForLocator(AppiumFieldDecorator.java:105)
-	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:62)
-	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:160)
-	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
-	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
-	at POC_Pages.handleAlertPages.&lt;init&gt;(handleAlertPages.java:30)
-	at com.poc.test.handleAlertTests.AlertButton(handleAlertTests.java:24)
+                  <a name="AlertClick">
+                  </a> <!-- AlertClick -->
+                  <span class="method-name">AlertClick</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;com.poc.test.handleAlertTests.prop&quot; is null
+	at com.poc.test.handleAlertTests.AlertClick(handleAlertTests.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -184,34 +174,6 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: net.sf.cglib.core.CodeGenerationException: java.lang.reflect.InaccessibleObjectException--&gt;Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @40f9161a
-	at net.sf.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:464)
-	at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:339)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:96)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:94)
-	at net.sf.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at net.sf.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
-	at net.sf.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
-	at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:119)
-	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:294)
-	at net.sf.cglib.core.KeyFactory$Generator.create(KeyFactory.java:221)
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:174)
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:153)
-	at net.sf.cglib.proxy.Enhancer.&lt;clinit&gt;(Enhancer.java:73)
-	... 39 more
-Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not &quot;opens java.lang&quot; to unnamed module @40f9161a
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357)
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
-	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
-	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
-	at net.sf.cglib.core.ReflectUtils$1.run(ReflectUtils.java:61)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
-	at net.sf.cglib.core.ReflectUtils.&lt;clinit&gt;(ReflectUtils.java:52)
-	at net.sf.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:243)
-	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
-	at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:332)
-	... 51 more
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -236,7 +198,7 @@ Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protect
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/bl/0fy3gnyd20795c_70vrsgjdm0000gq/T/testng-eclipse--1637619423/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/bl/0fy3gnyd20795c_70vrsgjdm0000gq/T/testng-eclipse-105630750/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -289,11 +251,11 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'sampleTest')
 data.setCell(0, 2, 'com.poc.test.handleAlertTests')
-data.setCell(0, 3, 3554);
+data.setCell(0, 3, 3100);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'AlertButton')
+data.setCell(1, 1, 'AlertClick')
 data.setCell(1, 2, 'com.poc.test.handleAlertTests')
-data.setCell(1, 3, 350);
+data.setCell(1, 3, 2);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -331,27 +293,27 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
-                <span class="method-start">395 ms</span>
+                <span class="method-start">460 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">sampleTest</span>
-                <span class="method-start">20116 ms</span>
+                <span class="method-start">29841 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">AlertButton</span>
-                <span class="method-start">23676 ms</span>
+                <span class="method-name">AlertClick</span>
+                <span class="method-start">32948 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">endReport</span>
-                <span class="method-start">24033 ms</span>
+                <span class="method-start">32958 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">teardown</span>
-                <span class="method-start">24552 ms</span>
+                <span class="method-start">33455 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
