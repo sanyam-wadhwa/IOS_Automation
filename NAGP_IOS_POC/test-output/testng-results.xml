@@ -1,39 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="7" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-11T23:35:13 IST" name="Suite" finished-at="2021-07-11T23:35:25 IST" duration-ms="11639">
+  <suite started-at="2021-07-12T07:12:02 IST" name="Default suite" finished-at="2021-07-12T07:12:27 IST" duration-ms="24497">
     <groups>
     </groups>
-    <test started-at="2021-07-11T23:35:13 IST" name="UiCatalog App" finished-at="2021-07-11T23:35:25 IST" duration-ms="11639">
+    <test started-at="2021-07-12T07:12:02 IST" name="Default test" finished-at="2021-07-12T07:12:27 IST" duration-ms="24497">
       <class name="com.poc.test.handleAlertTests">
-        <test-method signature="sampleTest()[pri:0, instance:com.poc.test.handleAlertTests@313ac989]" started-at="2021-07-11T23:35:24 IST" name="sampleTest" finished-at="2021-07-11T23:35:24 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sampleTest -->
-        <test-method signature="AlertButton()[pri:0, instance:com.poc.test.handleAlertTests@313ac989]" started-at="2021-07-11T23:35:24 IST" name="AlertButton" finished-at="2021-07-11T23:35:24 IST" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AlertButton -->
-      </class> <!-- com.poc.test.handleAlertTests -->
-      <class name="com.poc.test.BaseTest">
-        <test-method is-config="true" signature="setExtent()[pri:0, instance:com.poc.test.BaseTest@2a3b5b47]" started-at="2021-07-11T23:35:13 IST" name="setExtent" finished-at="2021-07-11T23:35:13 IST" duration-ms="372" status="PASS">
+        <test-method is-config="true" signature="setExtent()[pri:0, instance:com.poc.test.handleAlertTests@5c6648b0]" started-at="2021-07-12T07:12:02 IST" name="setExtent" finished-at="2021-07-12T07:12:03 IST" duration-ms="395" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setExtent -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.poc.test.BaseTest@2a3b5b47]" started-at="2021-07-11T23:35:13 IST" name="setup" finished-at="2021-07-11T23:35:24 IST" duration-ms="10888" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.poc.test.handleAlertTests@5c6648b0]" started-at="2021-07-12T07:12:03 IST" name="setup" finished-at="2021-07-12T07:12:22 IST" duration-ms="19654" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="sampleTest()[pri:0, instance:com.poc.test.BaseTest@2a3b5b47]" started-at="2021-07-11T23:35:24 IST" name="sampleTest" finished-at="2021-07-11T23:35:24 IST" duration-ms="6" status="PASS">
+        <test-method signature="sampleTest()[pri:0, instance:com.poc.test.handleAlertTests@5c6648b0]" started-at="2021-07-12T07:12:23 IST" name="sampleTest" finished-at="2021-07-12T07:12:26 IST" duration-ms="3554" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sampleTest -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:com.poc.test.BaseTest@2a3b5b47]" started-at="2021-07-11T23:35:24 IST" name="endReport" finished-at="2021-07-11T23:35:25 IST" duration-ms="329" status="PASS">
+        <test-method signature="AlertButton()[pri:0, instance:com.poc.test.handleAlertTests@5c6648b0]" started-at="2021-07-12T07:12:26 IST" name="AlertButton" finished-at="2021-07-12T07:12:26 IST" duration-ms="350" status="FAIL">
+          <exception class="java.lang.ExceptionInInitializerError">
+            <full-stacktrace>
+              <![CDATA[java.lang.ExceptionInInitializerError
+at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:52)
+at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:33)
+at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:222)
+at io.appium.java_client.pagefactory.AppiumFieldDecorator.access$0(AppiumFieldDecorator.java:220)
+at io.appium.java_client.pagefactory.AppiumFieldDecorator$1.proxyForLocator(AppiumFieldDecorator.java:105)
+at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:62)
+at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:160)
+at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
+at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+at POC_Pages.handleAlertPages.<init>(handleAlertPages.java:30)
+at com.poc.test.handleAlertTests.AlertButton(handleAlertTests.java:24)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: net.sf.cglib.core.CodeGenerationException: java.lang.reflect.InaccessibleObjectException-->Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @40f9161a
+at net.sf.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:464)
+at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:339)
+at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:96)
+at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:94)
+at net.sf.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at net.sf.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
+at net.sf.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
+at net.sf.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:119)
+at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:294)
+at net.sf.cglib.core.KeyFactory$Generator.create(KeyFactory.java:221)
+at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:174)
+at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:153)
+at net.sf.cglib.proxy.Enhancer.<clinit>(Enhancer.java:73)
+... 39 more
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @40f9161a
+at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357)
+at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)
+at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)
+at net.sf.cglib.core.ReflectUtils$1.run(ReflectUtils.java:61)
+at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+at net.sf.cglib.core.ReflectUtils.<clinit>(ReflectUtils.java:52)
+at net.sf.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:243)
+at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
+at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:332)
+... 51 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ExceptionInInitializerError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AlertButton -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.poc.test.handleAlertTests@5c6648b0]" started-at="2021-07-12T07:12:26 IST" name="endReport" finished-at="2021-07-12T07:12:27 IST" duration-ms="457" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.poc.test.BaseTest@2a3b5b47]" started-at="2021-07-11T23:35:25 IST" name="teardown" finished-at="2021-07-11T23:35:25 IST" duration-ms="40" status="FAIL">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.poc.test.handleAlertTests@5c6648b0]" started-at="2021-07-12T07:12:27 IST" name="teardown" finished-at="2021-07-12T07:12:27 IST" duration-ms="61" status="FAIL">
           <exception class="org.openqa.selenium.UnsupportedCommandException">
             <message>
               <![CDATA[Method is not implemented
@@ -41,7 +108,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17
 System info: host: 'sanyamwadhwa-1.local', ip: 'fe80:0:0:0:1057:7065:3338:ff1f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '16.0.1'
 Driver info: io.appium.java_client.ios.IOSDriver
 Capabilities {app: /Users/sanyamwadhwa/Library..., browserName: , databaseEnabled: false, deviceName: iPhone 12 Pro Max, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: IOS, platformVersion: 14.5, takesScreenshot: true, udid: 5CA12C8C-9FE8-444C-8E95-C19..., webStorageEnabled: false}
-Session ID: edda84e8-6ded-4125-8db1-6d6b9d426a9d]]>
+Session ID: 1fc4e43f-4083-43b0-92ab-d217eadc4be7]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.UnsupportedCommandException: Method is not implemented
@@ -49,7 +116,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17
 System info: host: 'sanyamwadhwa-1.local', ip: 'fe80:0:0:0:1057:7065:3338:ff1f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '16.0.1'
 Driver info: io.appium.java_client.ios.IOSDriver
 Capabilities {app: /Users/sanyamwadhwa/Library..., browserName: , databaseEnabled: false, deviceName: iPhone 12 Pro Max, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: IOS, platformVersion: 14.5, takesScreenshot: true, udid: 5CA12C8C-9FE8-444C-8E95-C19..., webStorageEnabled: false}
-Session ID: edda84e8-6ded-4125-8db1-6d6b9d426a9d
+Session ID: 1fc4e43f-4083-43b0-92ab-d217eadc4be7
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -59,13 +126,13 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpR
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
 at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
 at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-at com.poc.test.BaseTest.teardown(BaseTest.java:125)
+at com.poc.test.BaseTest.teardown(BaseTest.java:158)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -91,7 +158,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.poc.test.BaseTest -->
-    </test> <!-- UiCatalog App -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.poc.test.handleAlertTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

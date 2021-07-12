@@ -1,26 +1,37 @@
 package com.poc.test;
 
+import java.util.Properties;
+
 import org.testng.annotations.Test;
 import POC_Pages.handleAlertPages;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.ios.IOSDriver;
 
 
 public class handleAlertTests extends BaseTest {
 	
-	AppiumDriver<MobileElement> driver;
 	
-	handleAlertPages alert;
+
+	private AppiumDriver<?> driver;
+	
+	public static handleAlertPages alert;
+	
+	public static Properties prop;
 	
 	
-	//handleAlertPages alert = new handleAlertPages(driver);
+	
+
 	
 	@Test
 	public void AlertButton() {
-		logger.info("Second method runs out");
-		System.out.println("This is the second test case");
+		handleAlertPages alertbtn = new handleAlertPages(driver);
+		logger.info(prop.getProperty("Alert"));
+		alertbtn.clickAlertButton();
+	
 	}
+}
 	
 
 
-}
+

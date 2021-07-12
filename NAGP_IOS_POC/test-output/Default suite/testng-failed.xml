@@ -6,6 +6,8 @@
       <class name="com.poc.test.handleAlertTests">
         <methods>
           <include name="AlertButton"/>
+          <include name="setExtent"/>
+          <include name="endReport"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>

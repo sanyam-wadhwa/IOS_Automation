@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -12,30 +13,51 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.ClickAction;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
-
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class BaseTest{
 
-	AppiumDriver<MobileElement> driver ;
+	public static AppiumDriver<MobileElement> driver ;
 	public static Properties prop;
 
 	public final static Logger logger = Logger.getLogger(BaseTest.class);
+
+
+//	public BaseTest(AppiumDriver<MobileElement> driver) {
+//		this.driver = driver;
+//		PageFactory.initElements(driver, this);
+//		//		wait = new WebDriverWait(driver, 15);
+//	}
+	
+	public BaseTest(AppiumDriver<MobileElement> driver) {
+        this.driver = driver;
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+	
+	
+
 
 
 	// Extent Report
@@ -62,10 +84,10 @@ public class BaseTest{
 		extent = new ExtentReports(System.getProperty("user.dir")+"/test-output/ExtentReport.html", true);
 		extent.addSystemInfo("Host Name", "sanyamwadhwa-1.local");
 		extent.addSystemInfo("User Name", "sanyamwadhwa");
-		
+
 
 	}
-	
+
 	public static String getScreenshot(WebDriver driver, String screenshotName) throws IOException{
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 		TakesScreenshot ts = (TakesScreenshot) driver;
@@ -90,7 +112,7 @@ public class BaseTest{
 			capability.setCapability(MobileCapabilityType.PLATFORM_VERSION, prop.getProperty("PLATFORM_VERSION"));
 			capability.setCapability(MobileCapabilityType.DEVICE_NAME, prop.getProperty("DEVICE_NAME"));
 			capability.setCapability(MobileCapabilityType.APP, prop.getProperty("APP"));
-			
+
 			URL url = new URL("http://127.0.0.1:4723/wd/hub");
 
 
@@ -105,11 +127,26 @@ public class BaseTest{
 		}
 	}
 
+	//	@FindBy(xpath = "//XCUIElementTypeStaticText[@name='Alert Views']")
+	//	private MobileElement alertbtn;
+
 	@Test
 	public void sampleTest() {
 
-		System.out.println("I am in sample test");
+		System.out.println(driver.getPageSource());
 
+		//		alertbtn.click();
+
+		//		MobileElement button = driver.findElement(By.xpath("//XCUIElementTypeButton[@name='chevron']"));
+		//		button.click();
+
+
+	}
+
+
+	private MobileElement ClickAction(boolean b) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 

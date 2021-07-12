@@ -9,36 +9,37 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSBy;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class handleAlertPages {
 
 	
 	
-	protected AppiumDriver<MobileElement> driver;
+//	public static AppiumDriver<MobileElement> driver;
     protected WebDriverWait wait;
     
+    private AppiumDriver<?> driver;
+    
+   
+	
+	 public handleAlertPages( AppiumDriver<?> driver) {
+	        this.driver = driver;
+	        PageFactory.initElements((new AppiumFieldDecorator(driver)), this);
+	    }
 	
 	
-	public handleAlertPages(AppiumDriver<MobileElement> driver) {
-	    this.driver = driver;
-	    PageFactory.initElements(driver, this);
-	    wait = new WebDriverWait(driver, 15);
-	  }
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Alert Views']")
+	public MobileElement alertbtn;
 	
-	String AlertButton = "Alert Views";
+	//XCUIElementTypeApplication[@name="UIKitCatalog"]
 	
-	
-//	@FindBy(xpath = "//XCUIElementTypeApplication[@name='Alert Views']")
-//	private MobileElement alertbtn;
-//	
-//	//XCUIElementTypeApplication[@name="UIKitCatalog"]
-//	
-//	public void clickAlertButton() {
-//		alertbtn.click();
-//		
-//		
-//	}
+	public void clickAlertButton() {
+		alertbtn.click();	
+		
+		
+	}
 	
 }
